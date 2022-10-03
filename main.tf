@@ -164,7 +164,7 @@ resource "google_dataproc_cluster" "cluster" {
       dynamic "endpoint_config" {
         for_each = lookup(cluster_config.value, "endpoint_config", null) == null ? [] : [cluster_config.value.endpoint_config]
         content {
-          enable_http_port_access = lookup(lifecycle_config.value, "enable_http_port_access", null)
+          enable_http_port_access = lookup(lifecycle_config.value, "enable_http_port_access", true)
         }
       }
     }
