@@ -159,7 +159,7 @@ resource "google_dataproc_cluster" "cluster" {
         content {
           idle_delete_ttl  = lookup(lifecycle_config.value, "idle_delete_ttl", null)
           auto_delete_time = lookup(lifecycle_config.value, "auto_delete_time", null)
-          enable_http_port_access = "true"
+          enable_http_port_access = var.endpoint_config
         }
       }
       dynamic "endpoint_config" {
