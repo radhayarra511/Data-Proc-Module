@@ -29,3 +29,10 @@ variable "cluster_config" {
     type = list(any)
     description = "(Optional) Allows you to configure various aspects of the cluster."
 }
+
+variable "endpoint" {
+    type = bool
+    description = "(Optional) Allows you to configure various aspects of the cluster."
+}
+
+
