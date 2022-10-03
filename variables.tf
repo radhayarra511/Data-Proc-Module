@@ -30,9 +30,5 @@ variable "cluster_config" {
     description = "(Optional) Allows you to configure various aspects of the cluster."
 }
 
-variable "endpoint_config" {
-    type = bool
-    description = "(Optional) Allows you to configure various aspects of the cluster."
-} 
 
 
