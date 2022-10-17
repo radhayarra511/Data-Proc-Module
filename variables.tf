@@ -30,11 +30,6 @@ variable "cluster_config" {
     description = "(Optional) Allows you to configure various aspects of the cluster."
 }
 
-variable "script" {
-    type = string
-    description = "(Optional) to intialize the script"
-    default  = null
-}
 
 
 
