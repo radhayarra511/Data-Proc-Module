@@ -85,7 +85,7 @@ variable "timeouts" {
   default = []
 }
 
-variable "worker_config" {
+variable "auto_scaling_worker_config" {
   description = "nested block: NestingList, min items: 0, max items: 1"
   type = set(object(
     {
