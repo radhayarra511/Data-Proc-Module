@@ -227,7 +227,7 @@ resource "google_dataproc_autoscaling_policy" "asp" {
   }
 
   dynamic "worker_config" {
-    for_each = var.worker_config
+    for_each = var.auto_scaling_worker_config
     content {
      
       max_instances = worker_config.value["max_instances"]
