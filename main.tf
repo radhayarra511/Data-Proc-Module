@@ -142,7 +142,7 @@ resource "google_dataproc_cluster" "cluster" {
         }
       }
       dynamic "initialization_action" {
-        for_each = lookup(cluster_config.value, "initialization_action", null) == null ? [] : cluster_config.value.initialization_action
+        for_each = lookup(cluster_config.value, "initialization_action", null) == null ? [] : [cluster_config.value.initialization_action]
         content {
           script      = lookup(initialization_action.value, "script", null)
           timeout_sec = lookup(initialization_action.value, "timeout_sec", null)
