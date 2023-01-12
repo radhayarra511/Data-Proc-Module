@@ -41,7 +41,7 @@ variable "location" {
 variable "policy_id" {
   description = "(required) - The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),\nand hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between\n3 and 50 characters."
   type        = string
-   default = null
+   
 }
 
 variable "basic_algorithm" {
